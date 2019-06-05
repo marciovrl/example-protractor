@@ -1,0 +1,27 @@
+{
+  "name": "example-protractor",
+  "version": "1.0.0",
+  "description": "Example of using the protractor for automated e2e testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor protractor.conf.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciovrl/example-protractor.git"
+  },
+  "author": "marcio lemos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marciovrl/example-protractor/issues"
+  },
+  "homepage": "https://github.com/marciovrl/example-protractor#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^5.0.2",
+    "cucumber-html-reporter": "^4.0.4",
+    "protractor": "^5.4.1",
+    "protractor-cucumber-framework": "0.6.0"
+  }
+}
