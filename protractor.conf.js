@@ -7,7 +7,6 @@ exports.config = {
   framework: "custom",
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   baseUrl: "https://www.mercadolivre.com.br/",
-  verbose: true,
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
@@ -19,7 +18,7 @@ exports.config = {
   cucumberOpts: {
     require: ["features/step_definitions/*.js", "features/support/*.js"],
     strict: true,
-    format: ["json:results.json"],
+    format: ["json:results.json", "node_modules/cucumber-pretty"],
     profile: false,
     "no-source": true
   },
