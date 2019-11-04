@@ -7,6 +7,7 @@ exports.config = {
   framework: "custom",
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   baseUrl: "https://www.mercadolivre.com.br/",
+  verbose: true,
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
@@ -16,7 +17,7 @@ exports.config = {
   },
   specs: ["features/specifications/*.feature"],
   cucumberOpts: {
-    require: ["features/step_definitions/*.step.js", "features/support/*.js"],
+    require: ["features/step_definitions/*.js", "features/support/*.js"],
     strict: true,
     format: ["json:results.json"],
     profile: false,
@@ -43,6 +44,11 @@ exports.config = {
 
   onPrepare: function() {
     browser.ignoreSynchronization = true;
+    const { Given, Then, When, Before } = require("cucumber");
+    global.Given = Given;
+    global.When = When;
+    global.Then = Then;
+    global.Before = Before;
   },
 
   afterLaunch: function() {
@@ -54,6 +60,6 @@ exports.config = {
       reportSuiteAsScenarios: true,
       launchReport: true
     };
-    reporter.generate(options);
+    // reporter.generate(options);
   }
 };
