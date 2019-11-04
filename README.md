@@ -22,6 +22,12 @@ git clone https://github.com/marciovrl/example-protractor.git
 npm install
 ```
 
+- Run webdriver:
+
+```
+npm run start-webdriver
+```
+
 - Run the testes
 
 ```
