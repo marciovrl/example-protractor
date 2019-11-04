@@ -1,13 +1,18 @@
 "use strict";
 
 exports.config = {
-  directConnect: true,
+  // directConnect: true,
+  seleniumAddress: "http://localhost:4444/wd/hub",
   ignoreUncaughtExceptions: true,
   framework: "custom",
   frameworkPath: require.resolve("protractor-cucumber-framework"),
   baseUrl: "https://www.mercadolivre.com.br/",
   capabilities: {
-    browserName: "chrome"
+    browserName: "chrome",
+    chromeOptions: {
+      args: ["--headless", "--disable-gpu", "--window-size=800x600"],
+      w3c: false
+    }
   },
   specs: ["features/specifications/*.feature"],
   cucumberOpts: {
