@@ -26,5 +26,8 @@
     "protractor": "^5.4.2",
     "protractor-cucumber-framework": "^6.1.1",
     "webdriver-manager": "^12.1.7"
+  },
+  "dependencies": {
+    "cucumber-pretty": "^1.5.0"
   }
 }
