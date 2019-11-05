@@ -25,7 +25,7 @@ npm install
 - Run webdriver:
 
 ```
-npm run start-webdriver
+npm run wd-start
 ```
 
 - Run the testes
