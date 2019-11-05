@@ -1,6 +1,4 @@
 let until = protractor.ExpectedConditions;
-let fs = require("fs");
-let Buffer = require("safe-buffer").Buffer;
 
 const { setDefaultTimeout } = require("cucumber");
 // setDefaultTimeout(60 * 1000);
